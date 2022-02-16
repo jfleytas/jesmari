@@ -1,0 +1,250 @@
+/* reset */
+*
+{
+	border: 0;
+	position: relative;
+	box-sizing: content-box;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+
+/* content editable */
+*[contenteditable] { border-radius: 0.25em; min-width: 1em; outline: 0; }
+
+*[contenteditable] { cursor: pointer; }
+
+*[contenteditable]:hover, *[contenteditable]:focus, img.hover { background: #DEF; box-shadow: 0 0 1em 0.5em #DEF; }
+
+span[contenteditable] { display: inline-block; }
+
+/* Detalle row */
+*[detallerow] { border-radius: 0.25em; min-width: 0.5em; outline: 0; }
+
+*[detallerow] { cursor: pointer; }
+
+*[detallerow]:hover, *[contentedidetallerowtable]:focus, img.hover { background: #DEF; box-shadow: 0 0 1em 0.5em #DEF; }
+
+span[detallerow] { display: inline-block; }
+
+
+/* Detalle Aplicacionrow */
+*[detalleaplicacionrow] { border-radius: 0.25em; min-width: 0.5em; outline: 0; }
+
+*[detalleaplicacionrow] { cursor: pointer; }
+
+*[detalleaplicacionrow]:hover, *[contentedidetalleaplicacionrowtable]:focus, img.hover { background: #DEF; box-shadow: 0 0 1em 0.5em #DEF; }
+
+span[detalleaplicacionrow] { display: inline-block; }
+
+/* Title */
+h1 { font: bold 100% sans-serif; letter-spacing: 0.5em; text-align: center; text-transform: uppercase; background: #000; border-radius: 0.25em; color: #FFF; margin: 0 0 1em; padding: 0.5em 0; }
+
+/* Boxes */
+.boxes
+{
+  width: 320px;
+}
+.dobleboxes
+{
+  width: 180px;
+}
+/* Special Boxes */
+.sucursal, .sucursal_origen, .sucursal_destino, .caja 
+{
+  width: 320px;
+}
+.deposito, .deposito_origen, .deposito_destino, .tipo_factura
+{
+  width: 320px;
+}
+
+/* page */
+html { font: 16px/1 'Open Sans', sans-serif; overflow: auto; padding: 0.5in; }
+html { background: #999; cursor: default; }
+
+body { box-sizing: border-box; height: 15in; margin: 0 auto; overflow: hidden; padding: 0.5in; width: 12.0in; }
+body { background: #FFF; border-radius: 1px; box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5); }
+
+/* article */
+article, article address, table.cabecera, table.detalle_aplicacion { margin: 0 0 3em; }
+article:after { clear: both; content: ""; display: table; }
+article h1 { clip: rect(0 0 0 0); position: absolute; }
+
+article address { float: left; font-size: 75%; font-weight: bold; }
+
+/* aside */
+aside h1 { border: none; border-width: 0 0 1px; margin: 0 0 1em; }
+aside h1 { border-color: #999; border-bottom-style: solid; }
+
+/* javascript */
+.add_detail, .cut_detail
+{
+	border-width: 1px;
+	display: block;
+	font-size: .8rem;
+	padding: 0.35em 3.5em;	
+	float: left;
+	text-align: center;
+	width: 0.6em;
+}
+
+.add_aplication_detail
+{
+	border-width: 1px;
+	display: block;
+	font-size: .8rem;
+	padding: 0.35em 3.5em;	
+	float: left;
+	text-align: center;
+	width: 0.6em;
+}
+
+p.titulos
+{
+	font-weight: bold;
+	color: #FF0000;
+}
+
+.add_detail, .cut_detail
+{
+	background: #9AF;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	background-image: -moz-linear-gradient(#00ADEE 5%, #0078A5 100%);
+	background-image: -webkit-linear-gradient(#00ADEE 5%, #0078A5 100%);
+	border-radius: 0.5em;
+	border-color: #0076A3;
+	color: #FFF;
+	cursor: pointer;
+	font-weight: bold;
+	text-shadow: 0 -1px 2px rgba(0,0,0,0.333);
+}
+
+.add_aplication_detail
+{
+	background: #9AF;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	background-image: -moz-linear-gradient(#00ADEE 5%, #0078A5 100%);
+	background-image: -webkit-linear-gradient(#00ADEE 5%, #0078A5 100%);
+	border-radius: 0.5em;
+	border-color: #0076A3;
+	color: #FFF;
+	cursor: pointer;
+	font-weight: bold;
+	text-shadow: 0 -1px 2px rgba(0,0,0,0.333);
+}
+
+.add_detail { margin: -2.5em 0 0; }
+.add_aplication_detail { margin: -2.5em 0 0; }
+
+.add_detail:hover { background: #00ADEE; }
+.add_aplication_detail:hover { background: #00ADEE; }
+
+.cut_detail { opacity: 0; position: absolute; top: 0; left: -1.5em; }
+.cut_detail { -webkit-transition: opacity 100ms ease-in; }
+
+.cut_detail { opacity: 1; }
+
+@media print {
+	* { -webkit-print-color-adjust: exact; }
+	html { background: none; padding: 0; }
+	body { box-shadow: none; margin: 0; }
+	span:empty { display: none; }
+	.add_detail, .cut_detail, .add_aplication_detail { display: none; }
+}
+
+.btn-success{
+	display: inline-block;
+	padding: 6px 8px;
+	margin-bottom: 0;
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+	text-decoration:none;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	 -webkit-user-select: none;
+	   -moz-user-select: none;
+	     -ms-user-select: none;
+	        user-select: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	width:70px;
+	float:right;
+	margin-left:10px;
+	margin-right:0px;
+	color:#fff;
+	text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+	background-color:#2d6ca2;
+	*background-color:#51a351;
+ 	background-repeat:repeat-x;border-color:#2d6ca2 #2d6ca2 #387038;
+ 	border-color: #2d6ca2;
+ 	font-weight:bold;
+}
+
+.btn-success:focus {
+  background-color: #419641;
+  background-position: 0 -15px;
+}
+
+.btn{
+	display: inline-block;
+	padding: 6px 8px;
+	margin-bottom: 0px;
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+	text-decoration:none;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	 -webkit-user-select: none;
+	   -moz-user-select: none;
+	     -ms-user-select: none;
+	        user-select: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	width:70px;
+	float:right;
+	color:#fff;
+	text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+	background-color:#FF0000;
+	*background-color:#51a351;
+ 	background-repeat:repeat-x;border-color:#FF0000 #FF0000 #387038;
+ 	border-color: #FF0000;
+ 	font-weight:bold;
+}
+
+.edit{
+	background-image: url(../img/edit.png);
+	background-repeat:no-repeat;
+	padding: 0px 10px;
+    border-radius: 4px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.delete{
+	background-image: url(../img/delete.jpg);
+	background-repeat:no-repeat;
+	padding: 0px 10px;
+    border-radius: 4px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+@page { margin: 0; }
